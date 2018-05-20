@@ -61,14 +61,14 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST, value = "/addOneUser")
     @ResponseBody
-    public ResultVO addUser (String userName, String headPicUrl) {
+    public ResultVO addUser (String id, String userName, String headPicUrl) {
         if (headPicUrl == null) {
             headPicUrl = "";
         }
-        if (!service.checkNameOnly(userName)) {
-            return ResultUtil.failure(CodeUtils.FAIL_USER_NAME_REPEAT, CodeUtils.MSG_USER_NAME_REPEAT);
+        if (!service.checkIDOnly(id)) {
+            return ResultUtil.failure(CodeUtils.FAIL_USER_ID_REPEAT, CodeUtils.MSG_USER_ID_REPEAT);
         }
-        UserDto dto = new UserDto(null, userName,headPicUrl,0);
+        UserDto dto = new UserDto(id, userName,headPicUrl,0);
         int result = service.addOne(dto);
         if (result > 0) {
             return ResultUtil.success();
@@ -83,8 +83,8 @@ public class UserController {
         if (userName == null) {
             return ResultUtil.failure(CodeUtils.FAIL_PARAMENT_ERROR,CodeUtils.MSG_USER_NAME_NULL);
         }
-        if (!service.checkNameOnly(userName)) {
-            return ResultUtil.failure(CodeUtils.FAIL_USER_NAME_REPEAT, CodeUtils.MSG_USER_NAME_REPEAT);
+        if (!service.checkIDOnly(userName)) {
+            return ResultUtil.failure(CodeUtils.FAIL_USER_ID_REPEAT, CodeUtils.MSG_USER_ID_REPEAT);
         }
         return ResultUtil.success();
     }

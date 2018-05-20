@@ -12,7 +12,7 @@ public interface CodeUtils {
     int FAIL_ROAST_TYPE_ERROR = 51001;
 
     int FAIL_USER_COIN_NULL = 52001;
-    int FAIL_USER_NAME_REPEAT = 52002;
+    int FAIL_USER_ID_REPEAT = 52002;
 
     String MSG_USER_ID_NULL = "User ID Can't be Null";
     String MSG_UNKNOWN = "unknown error";
@@ -22,6 +22,6 @@ public interface CodeUtils {
     String MSG_ROAST_TYPE_ERROR = "type error";
 
     String MSG_COIN_NULL = "coin can not be null";
-    String MSG_USER_NAME_REPEAT = "have a same username";
+    String MSG_USER_ID_REPEAT = "have a same ID";
     String MSG_USER_NAME_NULL = "username null";
 }

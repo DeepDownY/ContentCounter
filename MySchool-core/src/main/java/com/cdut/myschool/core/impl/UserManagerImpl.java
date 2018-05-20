@@ -66,7 +66,6 @@ public class UserManagerImpl implements UserManager {
         UserInfo temp = new UserInfo();
         BeanUtils.copyProperties(dto, temp);
         temp.setCoin(0);
-        temp.setId(UID.next());
         return mapper.insert(temp);
     }
 

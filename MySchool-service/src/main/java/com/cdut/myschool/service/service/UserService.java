@@ -6,5 +6,5 @@ public interface UserService extends BaseService<UserDto> {
 
     int updateCoin(String id, String coin);
 
-    boolean checkNameOnly(String name);
+    boolean checkIDOnly(String name);
 }

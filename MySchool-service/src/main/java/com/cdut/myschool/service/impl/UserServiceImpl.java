@@ -42,10 +42,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean checkNameOnly(String name) {
+    public boolean checkIDOnly(String name) {
         Map<String, Object> map = new HashMap<>();
         if (name != null) {
-            map.put(UserManager.KEY_USER_NAME, name);
+            map.put(UserManager.KEY_ID, name);
             return manager.queryByParams(map).size() == 0;
         }
         return false;
