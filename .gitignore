@@ -40,17 +40,17 @@ hs_err_pid*
 
 # IntelliJ project files
 ../.idea
-.idea/MySchool.iml
+.idea/ContentCounter.iml
 out
 gen
 /.idea/
-/MySchool/MySchoolmain.iml
-/MySchool/.idea/
-/MySchool/dlmonitor.iml
-/MySchool-core/target/
-/MySchool-persist/target/
-/MySchool-services/target/
-/MySchool-web/target/
+/ContentCounter/ContentCountermain.iml
+/ContentCounter/.idea/
+/ContentCounter/dlmonitor.iml
+/ContentCounter-core/target/
+/ContentCounter-persist/target/
+/ContentCounter-services/target/
+/ContentCounter-web/target/
 .settings/
 .project
 .classpath
